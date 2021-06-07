@@ -22,11 +22,13 @@
       "prettier --write"
     ]
   },
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api": "npx json-server --watch db.json --port 3001"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +47,7 @@
   },
   "devDependencies": {
     "husky": "^6.0.0",
+    "json-server": "^0.16.3",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.1"
   }
