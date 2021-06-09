@@ -1,0 +1,32 @@
+$selectedColor: #ff8a06;
+$reservedColor: #474747;
+$borderColor: #000;
+
+.space {
+  display: flex;
+  flex-shrink: 0;
+  width: clamp(40px, 4vw, 48px);
+  height: clamp(40px, 4vw, 48px);
+  padding: clamp(2px, 0.25vw, 3px);
+}
+
+.seat {
+  width: 100%;
+  border: 1px solid $borderColor;
+  &:hover:not(.reserved, .selected, .legend) {
+    cursor: pointer;
+    background-color: lighten($reservedColor, 50%);
+  }
+}
+
+.reserved {
+  background: $reservedColor;
+}
+
+.selected {
+  background: $selectedColor;
+  &:hover:not(.legend) {
+    cursor: pointer;
+    background-color: lighten($selectedColor, 20%);
+  }
+}

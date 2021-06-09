@@ -1,1 +1,6 @@
 @import '~bootstrap/scss/bootstrap.scss';
+
+.fit-content {
+  width: min-content;
+  margin: 0 auto;
+}
