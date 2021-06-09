@@ -21,7 +21,6 @@ export function Main() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log('Submitted');
     if (seatsNumber) {
       dispatch(saveSettings({ seatsNumber, seatsTogether }));
       history.push('/reservation');
