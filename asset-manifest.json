@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/xkom_task/static/css/main.0ab01bb7.chunk.css",
-    "main.js": "/xkom_task/static/js/main.eae65acd.chunk.js",
-    "main.js.map": "/xkom_task/static/js/main.eae65acd.chunk.js.map",
+    "main.js": "/xkom_task/static/js/main.2e803a75.chunk.js",
+    "main.js.map": "/xkom_task/static/js/main.2e803a75.chunk.js.map",
     "runtime-main.js": "/xkom_task/static/js/runtime-main.92d36d0f.js",
     "runtime-main.js.map": "/xkom_task/static/js/runtime-main.92d36d0f.js.map",
     "static/js/2.e286e73d.chunk.js": "/xkom_task/static/js/2.e286e73d.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.92d36d0f.js",
     "static/js/2.e286e73d.chunk.js",
     "static/css/main.0ab01bb7.chunk.css",
-    "static/js/main.eae65acd.chunk.js"
+    "static/js/main.2e803a75.chunk.js"
   ]
 }
