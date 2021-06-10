@@ -17,6 +17,7 @@
     "react-scripts": "4.0.3",
     "sass": "^1.34.1"
   },
+  "homepage": "https://saj96n.github.io/xkom_task",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -33,7 +34,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "npx json-server --watch db.json --port 3001"
+    "api": "npx json-server --watch db.json --port 3001",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.0",
     "husky": "^6.0.0",
     "json-server": "^0.16.3",
     "lint-staged": "^11.0.0",

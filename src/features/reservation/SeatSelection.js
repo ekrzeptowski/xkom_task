@@ -15,20 +15,27 @@ export function SeatSelection() {
   const reservation = useSelector(getReservation);
   const [touched, setTouched] = useState(false);
 
-  const { isLoading, data } = useFetch('/seats');
+  const { isLoading, data } = useFetch(
+    process.env.NODE_ENV === 'development'
+      ? '/seats'
+      : process.env.REACT_APP_SEATS_URL || '/seats'
+  );
+  const seatsArray = data?.seats || data;
 
   // Get maximum seat cords
-  const maxX = data && Math.max(...data.map((seat) => seat.cords.x));
-  const maxY = data && Math.max(...data.map((seat) => seat.cords.y));
+  const maxX =
+    seatsArray && Math.max(...seatsArray.map((seat) => seat.cords.x));
+  const maxY =
+    seatsArray && Math.max(...seatsArray.map((seat) => seat.cords.y));
 
   // Create empty space array
   const seats =
-    data &&
+    seatsArray &&
     [...Array(maxX + 1)].map(() => [...Array(maxY + 1)].map(() => null));
 
   // Create seats on free space
-  data &&
-    data.forEach((seat) => {
+  seatsArray &&
+    seatsArray.forEach((seat) => {
       seats[seat.cords.x][seat.cords.y] = seat;
     });
 
