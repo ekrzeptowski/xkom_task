@@ -49,7 +49,7 @@ export function Main() {
           name="isNextSeat"
           className="mb-3"
           id="isNextSeat"
-          value={seatsTogether}
+          checked={seatsTogether}
           onChange={onSeatsTogetherChanged}
           label="Czy miejsca mają być obok siebie?"
         />
